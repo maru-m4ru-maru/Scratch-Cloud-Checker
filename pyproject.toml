@@ -4,13 +4,13 @@ build-backend = "hatchling.build"
 
 [project]
 name = "scratchcc"
-version = "0.0.2"
+version = "0.0.3"
 description = "Scratch Cloud Checker"
 readme = "README.md"
 requires-python = ">=3.9"
 license = { file = "LICENSE" }
 authors = [{ name = "maru-m4ru-maru" }]
-keywords = ["scratch", "cloud-variables", "turbowarp", "checker", "assistant", "memory"]
+keywords = ["scratch", "cloud-variables", "turbowarp", "checker", "ai", "assistant", "memory"]
 
 [project.urls]
 Homepage = "https://github.com/maru-m4ru-maru/Scratch-Cloud-Checker"
