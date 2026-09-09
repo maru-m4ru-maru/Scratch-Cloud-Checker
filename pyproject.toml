@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "scratchcc"
+version = "0.0.1"
+description = "Scratch Cloud Checker"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "maru-m4ru-maru" }]
+keywords = ["scratch", "cloud-variables", "turbowarp", "checker"]
+
+[project.urls]
+Homepage = "https://github.com/maru-m4ru-maru/Scratch-Cloud-Checker"
+Repository = "https://github.com/maru-m4ru-maru/Scratch-Cloud-Checker"
+Issues = "https://github.com/maru-m4ru-maru/Scratch-Cloud-Checker/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/scratchcc"]
