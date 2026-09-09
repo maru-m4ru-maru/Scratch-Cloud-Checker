@@ -1,10 +1,15 @@
 """Scratch Cloud Checker (SCC)."""
 
-__version__ = "0.0.1"
+from .memory import Memory
+
+__version__ = "0.0.2"
 
 
 class SCC:
     """Main Scratch Cloud Checker interface."""
+
+    def __init__(self, memory: Memory | None = None) -> None:
+        self.memory = memory or Memory()
 
     def info(self) -> dict[str, str]:
         return {
@@ -14,5 +19,13 @@ class SCC:
             "status": "development",
         }
 
+    def remember(self, text: str, *, category: str = "general") -> dict:
+        """Remember a piece of information for future conversations."""
+        return self.memory.remember(text, category=category)
 
-__all__ = ["SCC", "__version__"]
+    def recall(self, query: str) -> list[dict]:
+        """Find memories related to a query."""
+        return self.memory.recall(query)
+
+
+__all__ = ["SCC", "Memory", "__version__"]
